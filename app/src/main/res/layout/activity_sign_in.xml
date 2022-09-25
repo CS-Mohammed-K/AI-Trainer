@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <TextView
+        android:id="@+id/signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Sign in"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="75dp"
+        android:gravity="center"
+        android:text="Welcome Back!"
+        android:textSize="13dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email1"
+        android:layout_below="@+id/welcome"
+        app:startIconDrawable="@drawable/ic_baseline_email_24"
+        android:drawablePadding="20dp"
+        app:boxBackgroundMode="outline"
+        app:hintEnabled="false"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/login_edit_background"
+            android:hint="Email"
+            android:padding="15dp"
+            android:textColor="@color/TrainerGreen"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email1"
+        android:id="@+id/password1"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        app:passwordToggleEnabled="true"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="10dp"
+        app:boxBackgroundMode="outline"
+        app:hintEnabled="false"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/login_edit_background"
+            android:hint="Password"
+            android:padding="15dp"
+            android:textColor="@color/TrainerGreen"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password1"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="end"
+        android:text="forgot password?"
+        android:textSize="15dp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_signin"
+        android:background="@drawable/login_edit_background"
+        android:layout_below="@+id/forgotPassword"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:text="Sign in"
+        android:theme="@style/Button.Green"
+        />
+
+    <TextView
+        android:id="@+id/cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_signin"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:text="Or continue with"
+        android:textSize="15dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:id="@+id/LineRight"
+        android:layout_below="@+id/btn_signin"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="270dp"
+        android:layout_marginLeft="40dp"
+        android:backgroundTint="#75000000"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:id="@+id/LineLeft"
+        android:layout_below="@+id/btn_signin"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="270dp"
+        android:backgroundTint="#75000000"
+        />
+
+    <LinearLayout
+        android:id="@+id/lin_layout_google_twitter_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cont"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cont_btn_google"
+            android:drawableLeft="@drawable/ic_google_icon"
+            android:text="Google"
+            android:textAllCaps="false"
+            android:textColor="@color/TrainerGreen" />
+
+        <Button
+            android:id="@+id/btn_twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cont_btn_twitter"
+            android:drawableLeft="@drawable/ic_twitter_icon"
+            android:text="Twitter"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:theme="@style/Button.twitter" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/lin_layout_google_twitter_buttons"
+        android:layout_marginTop="50dp"
+        android:id="@+id/LinLayout"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/LinLayoutText1"
+            android:text="Don't have an account?"
+            android:textSize="15dp"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/LinLayoutText2"
+            android:text="Sign up"
+            android:textSize="15dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/TrainerGreen"
+        />
+    </LinearLayout>
+</RelativeLayout>
