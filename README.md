@@ -1,2 +1,1 @@
-# Trainer
- KFUPM CS411 Senior Project
+AI Trainer
